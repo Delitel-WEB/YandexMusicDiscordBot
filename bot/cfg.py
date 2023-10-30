@@ -1,5 +1,5 @@
 import os
 
-token = os.environ["discordBotToken"]
-YMToken = os.environ["YMTOKEN"]
+token = "MyDiscordToken"
+YMToken = "MyYMToken"
 
