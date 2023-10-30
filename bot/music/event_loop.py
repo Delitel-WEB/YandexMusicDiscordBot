@@ -69,7 +69,7 @@ async def event_loop(voiceManager: VoiceManager):
                         audio_data = AudioSegment.from_file(BytesIO(trackSource), format='mp3')
                         normalized_audio = audio_data.normalize()
 
-                        voiceManager.voiceClient.play(FFmpegOpusAudio(normalized_audio.export(format='wav'), pipe=True))
+                        voiceManager.voiceClient.play(FFmpegOpusAudio(normalized_audio.export(format='wav'), pipe=True, executable="ffmpeg.exe"))у
                         await now_playing(voiceManager, track)
             except Exception as err:
                 log.error(err, exc_info=True)
