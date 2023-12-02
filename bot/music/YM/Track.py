@@ -31,6 +31,7 @@ class Track:
             self.track_object = track
 
         if track.available:
+            self.album_id, self.track_id = track.albums[0].id, track.id
             self.artists = track.artists
             self.title = track.title
             self.preview = "https://" + track.cover_uri.replace("%%", "1000x1000")
